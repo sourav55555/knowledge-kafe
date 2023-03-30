@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Blogs from './Components/Blogs/Blogs'
 import SideBar from './Components/SideBars/SideBar'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -19,7 +21,7 @@ function App() {
     let exists = bookmarks.find(data => data == title);
 
     if(exists){
-      alert("already bookmarked")
+      toast("Can't add, already bookmarked!")
     }
     else{
       let updateBookmark = [...bookmarks, title];
@@ -47,6 +49,7 @@ function App() {
         </div>
         <SideBar timeTotal={timeTotal} bookmarks={bookmarks}></SideBar>
       </div>
+      <ToastContainer/>
     </div>
   )
 }
