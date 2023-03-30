@@ -6,7 +6,7 @@
         "published": "Mar 15",
         "title": "How to be a self-taught programmer and become a freelancer",
         "profileImg": "https://randomuser.me/api/portraits/men/75.jpg",
-        "duration": "5"
+        "duration": "05"
     },
     {
         "id":2,
@@ -33,6 +33,6 @@
         "published": "Mar 21",
         "title": "Improve your programming from beginner level to top level",
         "profileImg": "https://randomuser.me/api/portraits/men/43.jpg",
-        "duration": "9"
+        "duration": "14"
     }
 ]
