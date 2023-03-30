@@ -17,7 +17,7 @@ const Blogs = (props) => {
                     </div>
                     <div className='flex text-xl items-center'>
                         <p className='me-3'>{duration} min read</p>
-                        <button><FontAwesomeIcon icon={faBookmark} /></button>
+                        <button onClick={() => props.bookmark(title)}><FontAwesomeIcon icon={faBookmark} /></button>
                     </div>
                 </div>
                 

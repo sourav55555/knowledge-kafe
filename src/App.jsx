@@ -8,10 +8,23 @@ import SideBar from './Components/SideBars/SideBar'
 function App() {
   const [blogs, setBlogs] = useState([]);
   const [timeTotal, setTimeTotal] = useState(0);
+  const [bookmarks, setBookmarks] = useState([]);
 
   const spentTime = (time) => {
     let updateTime = timeTotal + parseInt(time);
     setTimeTotal(updateTime);
+  }
+
+  const bookmark = (title) =>{
+    let exists = bookmarks.find(data => data == title);
+
+    if(exists){
+      alert("already bookmarked")
+    }
+    else{
+      let updateBookmark = [...bookmarks, title];
+      setBookmarks(updateBookmark);
+    }
   }
 
   useEffect( ()=>{
@@ -29,10 +42,10 @@ function App() {
       <div className='flex my-6 justify-around '>
         <div className=''>
           {
-            blogs.map((blog) => <Blogs key={blog.id} blog={blog} spentTime={spentTime}></Blogs>) 
+            blogs.map((blog) => <Blogs key={blog.id} blog={blog} bookmark={bookmark} spentTime={spentTime}></Blogs>) 
           }
         </div>
-        <SideBar timeTotal={timeTotal}></SideBar>
+        <SideBar timeTotal={timeTotal} bookmarks={bookmarks}></SideBar>
       </div>
     </div>
   )
