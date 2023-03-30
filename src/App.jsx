@@ -36,12 +36,12 @@ function App() {
   }, [])
 
   return (
-    <div className='px-10 container mx-auto'>
+    <div className='md:px-10 px-4 container mx-auto'>
       <nav className='flex justify-between items-center py-8 border-b-2'>
-        <h2 className='text-2xl font-bold'>Know Programming</h2>
+        <h2 className='text-2xl font-bold w-1/2'>Know Programming</h2>
         <img className='w-16 h-16 rounded-full' src="https://randomuser.me/api/portraits/men/64.jpg" alt="" />
       </nav>
-      <div className='flex my-6 justify-around '>
+      <div className='flex flex-col md:flex-row my-6 justify-around '>
         <div className=''>
           {
             blogs.map((blog) => <Blogs key={blog.id} blog={blog} bookmark={bookmark} spentTime={spentTime}></Blogs>) 
