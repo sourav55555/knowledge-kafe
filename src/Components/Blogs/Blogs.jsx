@@ -7,6 +7,7 @@ const Blogs = (props) => {
     return (
         <div className='border-b-2 md:py-10 py-6 md:my-0 my-4'>
             <img className='md:w-[885px] md:h-[450px] w-full h-56 rounded-lg mb-6' src={image} alt="" />
+            
                 <div className='flex flex-col md:flex-row md:justify-between justify-start md:items-center mb-6'>
                     <div className='flex items-center'>
                         <img className='w-16 h-16 rounded-full me-4' src={profileImg} alt="" />

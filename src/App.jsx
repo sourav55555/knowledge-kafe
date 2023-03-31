@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Blogs from './Components/Blogs/Blogs'
 import SideBar from './Components/SideBars/SideBar'
@@ -37,10 +35,12 @@ function App() {
 
   return (
     <div className='md:px-10 px-4 container mx-auto'>
+
       <nav className='flex justify-between items-center py-8 border-b-2'>
         <h2 className='text-2xl font-bold w-1/2'>Know Programming</h2>
         <img className='w-16 h-16 rounded-full' src="https://randomuser.me/api/portraits/men/64.jpg" alt="" />
       </nav>
+
       <div className='flex flex-col md:flex-row my-6 justify-around '>
         <div className=''>
           {
@@ -49,6 +49,7 @@ function App() {
         </div>
         <SideBar timeTotal={timeTotal} bookmarks={bookmarks}></SideBar>
       </div>
+
       <div className='my-10 md:mx-8 mx-3'>
         <div className='mb-4 border-2 rounded-lg p-4'>
           <p className='my-3 border-b-2 pb-3 font-semibold'>What is the difference between props and state?</p>
@@ -74,8 +75,10 @@ function App() {
           </p>
         </div>
       </div>
+
       <ToastContainer/>
     </div>
   )
-        }
+        
+}
 export default App;
