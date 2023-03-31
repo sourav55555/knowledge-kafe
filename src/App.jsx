@@ -49,7 +49,7 @@ function App() {
         </div>
         <SideBar timeTotal={timeTotal} bookmarks={bookmarks}></SideBar>
       </div>
-      <div className='my-10 mx-8'>
+      <div className='my-10 md:mx-8 mx-3'>
         <div className='mb-4 border-2 rounded-lg p-4'>
           <p className='my-3 border-b-2 pb-3 font-semibold'>What is the difference between props and state?</p>
           <p>
